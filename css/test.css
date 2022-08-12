@@ -1,0 +1,46 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.246),rgba(0, 0, 0, 0.246)), url("../images/2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.circle{
+  position: relative;
+  background-color: rgb(171, 171, 43);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.growing{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: black;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  animation-name: spinner;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes spinner {
+  0%{
+    height:100px;
+    width:100px;
+    opacity: 0.6;
+  }
+  50%{
+    height:150px;
+    width:150px;
+    opacity: 0.3;
+  }
+  100%{
+    opacity:0;
+  }
+}
